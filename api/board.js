@@ -334,7 +334,7 @@ function AgileBoardClient(jiraClient) {
   // TODO add JsDoc
   this.getFeaturesForBoard = function (opts, callback) {
     var options = {
-      uri: 'board' + opts.boardId + '/features',
+      uri: this.jiraClient.buildAgileURL('/board/' + opts.boardId + '/features'),
       method: 'GET',
       json: true,
       followAllRedirects: true
